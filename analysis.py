@@ -26,8 +26,22 @@ plt.ylabel('Count')
 plt.tight_layout()
 plt.savefig('enrolment_trends.png')
 
-# 3. Analyze Update Trends
-print("Generating Update Comparison Graph...")
+# 3. Analyze Demographic Specific Trends (NEW)
+print("Generating Demographic Update Graph...")
+demo_state = df_demographic.groupby('state')[['demo_age_5_17', 'demo_age_17_']].sum()
+demo_state['Total'] = demo_state.sum(axis=1)
+top_demo = demo_state.sort_values('Total', ascending=False).head(10)
+
+plt.figure(figsize=(12, 6))
+top_demo[['demo_age_5_17', 'demo_age_17_']].plot(kind='bar', stacked=True, color=['skyblue', 'salmon'])
+plt.title('Demographic Update Volume by State')
+plt.xlabel('State')
+plt.ylabel('Update Requests')
+plt.tight_layout()
+plt.savefig('demographic_trends.png')
+
+# 4. Analyze Update Comparison
+print("Generating Comparison Graph...")
 bio_counts = df_biometric.groupby('state')[['bio_age_5_17', 'bio_age_17_']].sum().sum(axis=1)
 demo_counts = df_demographic.groupby('state')[['demo_age_5_17', 'demo_age_17_']].sum().sum(axis=1)
 
@@ -41,4 +55,4 @@ plt.ylabel('Volume')
 plt.tight_layout()
 plt.savefig('update_comparison.png')
 
-print("Analysis Complete. Graphs saved.")
+print("Analysis Complete. All 3 graphs saved.")
