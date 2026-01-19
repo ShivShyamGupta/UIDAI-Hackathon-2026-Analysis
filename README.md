@@ -1,6 +1,6 @@
 # UIDAI Data Hackathon 2026: Service Delivery Optimization Framework
 
-**Team Name:** [Insert Your Team Name]
+**Team Name: NIT UK
 **Problem Statement:** Analysis of Enrolment Saturation & Update Trends
 **Submission Date:** January 20, 2026
 
