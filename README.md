@@ -13,10 +13,9 @@ This project analyzes **5 million+ Aadhaar transaction records** (Fiscal Year 20
 3.  **Resource Mismatch:** Current infrastructure heavily favors new enrolments. We propose a "Dynamic Kit Reallocation" strategy to convert under-utilized enrolment stations into dedicated **Biometric Update Hubs**.
 
 ## 📂 Repository Structure
-* `analysis.py` - The Python script used to process the raw CSV data and generate insights.
-* `api_data_aadhar_enrolment.csv` - Cleaned dataset for new enrolments.
-* `api_data_aadhar_biometric.csv` - Cleaned dataset for biometric update transactions.
-* `Project_Report.pdf` - The final consolidated report submitted to the OGD portal.
+* `analysis.py` - The Python script used to process the raw CSV data.
+* `Project_Report.pdf` - The final consolidated report.
+* *Note: The raw datasets are not included in this repository. The script assumes the official hackathon data files are present in the root directory.*
 
 ## 🛠️ Technology Stack
 * **Language:** Python 3.10
